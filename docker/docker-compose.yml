@@ -7,7 +7,7 @@ services:
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
       - AWS_DEFAULT_REGION=us-east-1
-      - THING_NAME=GreengrassQuickStartCore-19d9e2fe53d
+      - THING_NAME=robot-1
       - THING_GROUP_NAME=robops-fleet
       - ROLE_ALIAS=GreengrassV2TokenExchangeAlias
     volumes:
