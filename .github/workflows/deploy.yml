@@ -49,7 +49,7 @@ jobs:
             --version $IMAGE_TAG \
             --fleet robops-fleet
 
-- name: Setup Terraform
+      - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform validate
