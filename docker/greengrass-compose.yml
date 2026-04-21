@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  greengrass:
+    image: x86_64/aws-iot-greengrass:2.5.4
+    container_name: greengrass-core
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=us-east-1
+      - THING_NAME=robot-1
+      - THING_GROUP_NAME=robops-fleet
+      - ROLE_ALIAS=GreengrassV2TokenExchangeAlias
+    volumes:
+      - greengrass_data:/greengrass/v2
+    ports:
+      - "8883:8883"
+    privileged: true
+
+volumes:
+  greengrass_data:

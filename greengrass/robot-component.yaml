@@ -1,0 +1,14 @@
+ComponentName: com.robops.robot-app
+ComponentVersion: "1.0.0"
+ComponentDescription: "ROS2 Robot Sensor App"
+ComponentPublisher: "RobOps"
+ComponentConfiguration:
+  DefaultConfiguration:
+    fault_mode: "false"
+Manifests:
+  - Platform:
+      os: linux
+    Lifecycle:
+      Run: "docker run --rm -e FAULT_MODE={configuration:/fault_mode} 439415366264.dkr.ecr.us-east-1.amazonaws.com/robot-app/robot-app:latest"
+    Artifacts:
+      - URI: "docker:439415366264.dkr.ecr.us-east-1.amazonaws.com/robot-app/robot-app:latest"
