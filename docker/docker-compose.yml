@@ -10,6 +10,10 @@ services:
       - THING_NAME=robot-1
       - THING_GROUP_NAME=robops-fleet
       - ROLE_ALIAS=GreengrassV2TokenExchangeAlias
+      - PROVISION=true
+      - SETUP_SYSTEM_SERVICE=false
+      - COMPONENT_DEFAULT_USER=ggc_user:ggc_group
+      - DEPLOY_DEV_TOOLS=true
     volumes:
       - greengrass_data:/greengrass/v2
     ports:
