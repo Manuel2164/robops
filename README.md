@@ -1,6 +1,6 @@
 # RobOps — Autonomous CI/CD Pipeline for Edge Robotics
 
-![CI/CD Pipeline](https://github.com/Manuel2164/robops/.github/workflows/deploy.yml)
+![CI/CD Pipeline](https://github.com/Manuel2164/robops/blob/main/.github/workflows/deploy.yml)
 
 ## Overview
 RobOps is an end-to-end CI/CD pipeline that automates software deployment to a simulated fleet of edge robots. A code push to GitHub automatically triggers a build, pushes a Docker image to AWS ECR, and deploys it to a robot fleet via AWS Greengrass with canary deployment logic — if sensor telemetry shows an anomaly after the update, the cloud automatically rolls back the firmware.
